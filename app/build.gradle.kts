@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.example.cryptocurrencyapp"
-    compileSdk = 34
+    compileSdk = 35  // Updated to 35
 
     defaultConfig {
         applicationId = "com.example.cryptocurrencyapp"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -70,4 +70,10 @@ dependencies {
     implementation(libs.androidx.foundation.layout)
     implementation(libs.com.javapoet)
     kapt(libs.com.hilt.compiler)
+
+    // Add test dependencies
+    androidTestImplementation("androidx.test:runner:1.5.2")
+    androidTestImplementation("androidx.test:rules:1.5.0")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    testImplementation("junit:junit:4.13.2")
 }
